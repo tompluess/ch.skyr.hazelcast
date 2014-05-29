@@ -1,6 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <classpath>
-  <classpathentry kind="src" path="src/main/java" excluding="**/.svn/|**/CVS/"/>
-  <classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
-  <classpathentry kind="output" path="target/classes"/>
-  <classpathentry kind="var" path="M2_REPO/com/hazelcast/hazelcast/3.2.1/hazelcast-3.2.1.jar" sourcepath="M2_REPO/com/hazelcast/hazelcast/3.2.1/hazelcast-3.2.1-sources.jar" javadocpath="M2_REPO/com/hazelcast/hazelcast/3.2.1/hazelcast-3.2.1-javadoc.jar"/>
+	<classpathentry excluding="**/.svn/|**/CVS/" kind="src" path="src/main/java"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry javadocpath="M2_REPO/com/hazelcast/hazelcast/3.2.1/hazelcast-3.2.1-javadoc.jar" kind="var" path="M2_REPO/com/hazelcast/hazelcast/3.2.1/hazelcast-3.2.1.jar" sourcepath="/M2_REPO/com/hazelcast/hazelcast/3.2.1/hazelcast-3.2.1-sources.jar"/>
+	<classpathentry kind="output" path="target/classes"/>
 </classpath>
