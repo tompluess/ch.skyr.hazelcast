@@ -8,7 +8,8 @@ import com.hazelcast.core.Hazelcast;
 import com.hazelcast.core.HazelcastInstance;
 
 public class DistributedMap {
-    private static final String MAP_NAME = "my-distributed-map";
+    private static final String MAP_NAME             = "my-distributed-map";
+    private static final int    RUN_DURATION_SECONDS = 30;
 
     public static void main(final String[] args) throws InterruptedException {
 
@@ -36,10 +37,13 @@ public class DistributedMap {
         //
         map.put("ts-" + System.currentTimeMillis(), "bla");
 
-        while (true) {
+        final long runDurationFinished = System.currentTimeMillis() + RUN_DURATION_SECONDS * 1000;
+        while (runDurationFinished > System.currentTimeMillis()) {
             printMap(h);
             Thread.sleep(3000);
         }
+        System.out.println("run duration finished.");
+        h.shutdown();
     }
 
     private static void printMap(final HazelcastInstance h) {

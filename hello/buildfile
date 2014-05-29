@@ -19,6 +19,7 @@ define "ch.skyr.hazelcast.hello" do
   project.version = VERSION_NUMBER
   project.group = GROUP
   compile.with HAZELCAST
+  run.using :main => "ch.skyr.hazelcast.hello.DistributedMap"
   manifest["Implementation-Vendor"] = COPYRIGHT
   package :jar
   eclipse.natures :java
