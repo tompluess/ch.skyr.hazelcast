@@ -17,4 +17,5 @@ define "hello" do
   project.group = GROUP
   manifest["Implementation-Vendor"] = COPYRIGHT
   package :jar
+  eclipse.natures :java
 end
